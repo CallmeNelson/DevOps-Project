@@ -1,7 +1,7 @@
 # Linux Project For Commands
 
-## 'cp' commands
+## 'mv' commands
 
-Use the cp command to copy files or directories and their content.
+The primary use of the mv command is to move and rename files and directory.
 
-![Alt text](<Images/Screenshot 2023-12-25 at 01.35.16.png>)
+![Alt text](<../PROJECT 7/Images/Screenshot 2023-12-25 at 01.46.08.png>)
