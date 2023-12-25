@@ -1,7 +1,7 @@
 # Linux Project For Commands
 
-## 'df' commands
+## 'du' commands
 
-Use the df command to report the system's disk usage,shown in percentage and kilobyte (KB).
+Use du command to check how much space a file or a directory takes up.
 
-![Alt text](<Images/Screenshot 2023-12-25 at 14.05.56.png>)
+![Alt text](<../PROJECT 16/Images/Screenshot 2023-12-25 at 14.19.17.png>)
