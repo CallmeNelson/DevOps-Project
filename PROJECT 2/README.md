@@ -10,7 +10,7 @@ Before initializing a git repo you must have installed git in your comuter. Foll
 
 • Change or move into your working directory or folder using this command " cd DevOps " .
 
-• While you are inside the folder,run " git init " command .
+• While you are inside the folder,run " git init " command.
 
 
 ![Alt text](<Images/Screenshot 2024-01-01 at 01.28.02.png>)
