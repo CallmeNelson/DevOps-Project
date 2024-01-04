@@ -31,3 +31,25 @@ Now less make our first commit by following these steps:
 • To commit your changes to git, run the command ' git commit -m "initial commit"
 
 ![Alt text](<Images/Screenshot 2024-01-04 at 13.20.36.png>)
+
+The -m flag is used to provide a commit message. The commit messsage is a nice way to provide context about the commit. When writing a commit message, make it descriptive as possible. Let it explain why the commit was made.
+
+
+## WORKING WITH BRANCHES
+
+Git branch is an important tool for collaboration within remote teams(developers working from different location). They can make separate branches while working on same feature. And at the end of the day, converge their code to one branch.
+
+## Make your first git Branch
+
+To make a new branch run this command: 'git checkout -b
+
+The -b flag helps you create and change into the new branch
+
+Now lets make our first branch following these steps:
+
+• Having made your first commit in the previous lesson
+
+• Make a new branch by running this command ' git checkout -b my-new-branch
+
+
+![Alt text](<Images/Screenshot 2024-01-04 at 17.00.42.png>)
