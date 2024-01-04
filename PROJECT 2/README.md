@@ -45,7 +45,7 @@ To make a new branch run this command: 'git checkout -b
 
 The -b flag helps you create and change into the new branch
 
-Now lets make our first branch following these steps:
+### Now lets make our first branch following these steps:
 
 • Having made your first commit in the previous lesson
 
