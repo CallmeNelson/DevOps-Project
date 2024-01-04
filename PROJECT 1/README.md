@@ -1,6 +1,6 @@
 # Linux Project For Commands
 
-## 'Sudo' commands
+## 1. 'Sudo' commands
 
 sudo is a popular basic Linux commands that lets you perform tasks that require administrative or root permissions.
 
