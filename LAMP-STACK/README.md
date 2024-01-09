@@ -24,3 +24,90 @@ A technology stack is a set of frameworks and tools used to develop a software p
 • **MERN** ( MongoDB, ExpressJS, ReactJS, NodeJS )
 
 • **MEAN** ( MongoDB, ExpressJS, AngularJS, NodeJS )
+
+**WARNING**: Most of the things you will be doing at the early days may not mean a lot to youy. Sometimes it may seem like you are just copying and pastig. That is absolutely fine. I want some concepts to begin to register in your sub-conscious mind, and without you realising it, you are building up skills. although, there are certain traps that will require you to troubleshoot along the way. So watch out for them in all your project implementations.
+
+**After** succesful competion of **PBL** projects **1** to **4**, you will be able to achieve the following.
+
+1. Become very confident on the Linux Tereminal
+
+2. Deepen your understanding of Web Stack and familiarity between the differences between the different Web Technology stacks such as **LAMP**, **LEMP**, **MEAN**, **MERN** stacks
+
+3. Solid Linux administration skills in storage management, NFS, troubleshooting, and basic networking.
+
+4. Basic knowledge of AWS platform and components used to host a Website of various Web stacks.
+
+Being able to work with Linux require the ability to work outside the level of your present knowledge. It means that in the real world, you will be faced with tasks that you never worked on before, and with **Google** search and its results, you can achieve a lot.
+Thanks to "**Google**!!!". It is one of the essential skills you will need to develop - constructing a correct search query for Google to process and having the ability to comb through resources that interpretes into a potential solution for you is a great skill to have as well.
+
+**Side Self Study**
+
+1. conduct a Google search on what software development life cycle (SDLC) is and document your finding in a Google world file.
+
+2. Conduct another Google search, understand what LAMP stack means.
+
+3. Read about *'**chmod**'* and *'**chown**'* commands in Linux and understand how access and ownership of files and directories work.
+
+4. Learn what TCP and UPD terms mean and how they are different. List down ports most commonly used in Web (http, https, ssh, telnet, ftp, sftp, telnet)
+
+5. Get yourself familiar with basic text editing in **Vi (Vim)** editor.
+
+**Instructions On How To Submit Your Work For Review And Feedback**
+
+As a beginner it would be nice that you also set up your workspace for learning.
+
+**IMPORTANT NOTE**: For Mac user you do not need to download windowes terminal as you already have a terminal by defualt
+
+
+## Preparing Prerequisites
+
+**Step 0 - preparing prerequisites**
+
+In order to complete this project you will need an AWS account and a virtual server with Server OS.
+
+**AWS** is the biggest Cloud Service Provider and it offers a free tier account that we are going to leverage for our projects.
+
+Do not focus too much on AWS itself right now, there will be a proper Cloud introduction and configuration projects later in this course.
+
+Right now, all we need to know is that AWS can provide us with a free virtual server called **EC2 (Elastic Compute Cloud)** for our needs.
+
+Spinning up a new EC2 instance (an instance of a virtual server) is only a matter of a few clicks.
+
+### Follow these instructions below to get yourself set up.
+
+1. Register a new AWS account 
+
+2. Select your preferred ergion (the closest to you) and launch a new EC2 instance of t2.micro family with Ubuntu Server 20.04 LTS (HVM)
+
+**IMPORTANT** - save your private key (.pem file) securely and do not share it with anyone! If you lose it, you will not be able to connect to your server ever again!
+
+**IMPORTANT NOTICE** - Both *Putty* and *ssh* use the **SSH protocol** to establish connectivity between computers. It is the most secure protocol because it uses crypto algorithms to encrypt the data that is transmitted - it uses TCP port 22 which is open for all newly created EC2 instances in AWS by default. Most of these terminologies will make more sense to you as you proceed. So for now, if nothing makes sense, just ignore. But be assured that the information is already registered in your sub-conscious mind. So it will become useful to you soon.
+
+The process to connect to the virtual server is defferent between Windows and Mac. So lets take a quick tour.
+
+**(Windows)** - Connecting to EC2 using Putty.
+
+Remember the private key your downloaded from AWS while provisioning the server? It is a ***PEM*** file format. You can open it up to see the content and have a glimpse of what a ***PEM*** file looks like.
+
+Now, we are going to use that ***PEM*** key to connect to our EC2 Instance via ***ssh***.
+
+On, windows the windows terminal tool is not installed by default, you need to install it.
+
+**IMPOORTANT** - Anywhere you see these anchor tags **< >** , going forward, it means you will need to replace the cointent in there with values specific to your situation.
+
+**( Macbook )** Connecting to EC2 using the terminal
+
+• The terminal is already installed by default. You just need to open it up.
+
+• You do not need to conveert to a **.ppk** file . just use the same key as downloaded from AWS.
+
+• Change directory into the location where your **PEM** file is. Most likely will be in the **Downloads** folder.
+
+
+## Installing Apache And Updating The Firewall
+
+Step 1 - Installing Apache and updating the firewall
+
+**What is Apache?**
+
+**Apache HTTP Server** is the most widely used web server software. Developed and maintained by Apache Software Foundation, Apache is an open source software available for free. It rubs 67% of all webservers in the world. It is fast, reliable , and secure. However, websites and other applications can run on other web server software as well. Such as **Nginx, Microsoft's IIS,** etc.
