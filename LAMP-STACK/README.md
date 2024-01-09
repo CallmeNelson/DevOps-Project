@@ -111,3 +111,57 @@ Step 1 - Installing Apache and updating the firewall
 **What is Apache?**
 
 **Apache HTTP Server** is the most widely used web server software. Developed and maintained by Apache Software Foundation, Apache is an open source software available for free. It rubs 67% of all webservers in the world. It is fast, reliable , and secure. However, websites and other applications can run on other web server software as well. Such as **Nginx, Microsoft's IIS,** etc.
+
+**Install Apache using Ubuntu package manager**
+
+Use the following command;
+
+• $ sudo apt update
+
+• $ sudo apt install apache2
+
+
+![Alt text](<Images/Screenshot 2024-01-09 at 02.51.47.png>)
+
+To verify that apache2 is running as a Service in your OS,use the following command
+
+• $ sudo systemctl status apache2
+
+
+![Alt text](<Images/Screenshot 2024-01-09 at 02.55.34.png>)
+
+Lets try to check how we can access it locally in our Ubuntu shell, run any of this command;
+
+• $ curl http://locathost:80
+
+• $ curl http://127.0.0.1:80
+
+
+![Alt text](<Images/Screenshot 2024-01-09 at 03.15.02.png>)
+
+These 2 command above actually do pretty the same - they use **'*curl*'** command to request our Apache HTTP Server on port 80 (actually you can even try to not specify any port - it will work anyway).
+
+
+## Installing MySql
+
+Step 2 - Installing MySQL
+
+Now that you have a web server up and running, we need to install a **Database Management system (DBMS)** to be store and manage data for your site in a **relational database. MySQL** is a popular relational database management system used within PHP environment, so we will use it in our project.
+
+Again, use 'apt' to acquire and install this software:
+
+• $ sudo apt install mysql-server
+
+When prompted, confirm installation by typing **Y**, and then **ENTER**.
+
+
+![Alt text](<Images/Screenshot 2024-01-09 at 17.15.41.png>)
+
+When the installation is finished, log in to the MySQL console by typing:
+
+• $ sudo mysql
+
+This will connect to the MySQL server as the administrative database user **root**, which is inferred by the use of sudo when running this command. You should see output like this:
+
+
+![Alt text](<Images/Screenshot 2024-01-09 at 17.25.11.png>)
