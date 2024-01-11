@@ -123,6 +123,7 @@ Use the following command;
 
 ![Alt text](<Images/Screenshot 2024-01-09 at 02.51.47.png>)
 
+
 To verify that apache2 is running as a Service in your OS,use the following command
 
 • $ sudo systemctl status apache2
@@ -165,3 +166,52 @@ This will connect to the MySQL server as the administrative database user **root
 
 
 ![Alt text](<Images/Screenshot 2024-01-09 at 17.25.11.png>)
+
+Its recommanded that you run a security script that comes pre-installed with **MySQL**. This script will remove some insecure default settings and lock down access to your database system. Before running the script you will set a password for the **root** user, using **mysql_native_password** as default authentication method. The user's password is **PassWord.1** .
+
+### Exit the MySQL shell with:
+
+• mysql> **exit**
+
+### Start the interative script by running:
+
+• $ sudo mysql_secure_installation
+
+This will ask if you want to configure the **VALIDATE PASSWORD PLUGIN** .
+
+**Note**: Enabling this feature is something of a judgment call. if enabled, passwords which don't match the specified criteria will be rejected by MySQL with an error. It is safe to leave validation disabled, but you should always use strong, unique password for database credentials.
+
+
+![Alt text](<Images/Screenshot 2024-01-11 at 01.40.49.png>)
+
+
+## Installing PHP 
+
+Step 3 - installing PHP
+
+**PHP** is the component of our setup that will process code to display dynamic content to the end user. In addition to **php** package, you'll need **php-mysql**, a PHP module that allow PHP to communicate with MySQL-based databases. You'll als need **libapache2-mod-php** to enable Apache to handle PHP files. Core PHP packages will automatically be installed as dependencies.
+
+To install these 3 package at once, run:
+
+• $ sudo apt install php libapache2-mod-php php-mysql
+
+
+![Alt text](<Images/Screenshot 2024-01-11 at 02.04.24.png>)
+
+Once the installation is finished, you can run the following command to confirm your PHP version:
+
+• php -v
+
+
+![Alt text](<Images/Screenshot 2024-01-11 at 02.08.10.png>)
+
+At this point, your LAMP stack is completely installed and fully operational.
+
+• Linux (Ubuntu)
+
+• Apache HTTP Server
+
+• MySQL
+
+• PHP
+
