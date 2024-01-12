@@ -307,3 +307,16 @@ After saving and closing the file, you will need to reload Apache so the changes
 
 
 ![Alt text](<Images/Screenshot 2024-01-11 at 20.08.26.png>)
+
+Finally, we will create a PHP script to test that PHP is correctly installed and configured on your server.
+
+Create a new file named **index.php** inside your custom web root folder:
+
+
+![Alt text](<Images/Screenshot 2024-01-12 at 01.18.18.png>)
+
+This will open a blank file. Add the following text, which is valid PHP code, inside the file:
+
+•  <?php
+
+phpinfo();
