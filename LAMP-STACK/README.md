@@ -215,3 +215,95 @@ At this point, your LAMP stack is completely installed and fully operational.
 
 • PHP
 
+To test your setup with a PHP script, it's best to set up a proper **Apache Virtual Host** to hold your website's files and folder. Virtual host allows you to have multiple websites located on a single machine and user of the websites will not notice it.
+
+
+## Creating a Virtual Host for your Website using Apache
+
+Step 4 - Creating a Virtual host for your Website using Apache
+
+In this project,you will set up a domain called **projectlamp**, but you can replace this with domain of your choice.
+
+Create the directory for **projectlamp** using **'mkdir'** command as follows:
+
+• $ sudo mkdir /var/www/projectlamp
+
+Next, assign ownership of the directory with the **$USER** environment variable,which will reference your current system user:
+
+• sudo vi /etc/apache2/sites-available/project.conf
+
+This will create a new blank file . Paste in the following bare-bones configuration by hitting on **i** on the keyboard to enter the insert mode, and pastthe text:
+
+
+![Alt text](<Images/Screenshot 2024-01-11 at 17.20.14.png>)
+
+To save and close the filke, simply follow the step below:
+
+1. Hit the **esc** button on the keyboard
+
+2. Type **:**
+
+3. Type **wq**. **w** for *write* and **q** for *quit*
+
+4. Hit **ENTER** to save the file
+
+You can use the **ls** command to show the new file in the **sites-available** directory
+
+
+![Alt text](<Images/Screenshot 2024-01-11 at 17.44.55.png>)
+
+With the VirtualHost configuration, we're telling Apache to serve **projectlamp** using **var/www/projectlampl** as its web root directory.
+
+You can now use **a2ensite** command to enable the new virtual host:
+
+• $ sudo a2ensite projectlamp
+
+
+![Alt text](<Images/Screenshot 2024-01-11 at 17.55.53.png>)
+
+You might want to disable the default website that comes installed with Apache. To disable Apache's default website use **a2dissite** command, type:
+
+• sudo a2dissite 000-default
+
+
+)![Alt text](<Images/Screenshot 2024-01-11 at 19.27.38.png>)
+
+To make sure your configuration file doesn't contain syntax errors, run:
+
+• $ sudo apache2ctl configtest
+
+
+![Alt text](<Images/Screenshot 2024-01-11 at 19.29.00.png>)
+
+Finally, reload Apache so these changes take effect:
+
+• $ sudo systemctl reload apache2
+
+
+![Alt text](<Images/Screenshot 2024-01-11 at 19.38.11.png>)
+
+Your new website is now active, but the web root **/var/www/projectlamp** is still empty. Create and index.htmi file in that location so that we can test that the virtual host works as expected:
+
+
+![Alt text](<Images/Screenshot 2024-01-11 at 19.43.31.png>)
+
+
+## Enable PHP on the website
+
+Step 5 - Enable PHP on the website
+
+With the default **DireectoryIndex** setting on Apache, a file named **index.htmt** will always take precedence over an index.php file.
+
+In case you want to change this behavior, you'll need to edit the **/etc/apache2/mods-enabled/dir.conf** file and change the order in which the **index.php** file is listed within the **Directoryindex** directive:
+
+• sudo vim /etc/apache2/mods-enabled/dir.conf
+
+
+![Alt text](<Images/Screenshot 2024-01-11 at 20.05.46.png>)
+
+After saving and closing the file, you will need to reload Apache so the changes take effect:
+
+• sudo systemctl reload apache2
+
+
+![Alt text](<Images/Screenshot 2024-01-11 at 20.08.26.png>)
