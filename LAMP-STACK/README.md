@@ -121,7 +121,7 @@ Use the following command;
 • $ sudo apt install apache2
 
 
-![Alt text](<Images/Screenshot 2024-01-09 at 02.51.47.png>)
+![Alt text](<Images/Screenshot 2024-01-15 at 16.21.30.png>)
 
 
 To verify that apache2 is running as a Service in your OS,use the following command
@@ -129,16 +129,16 @@ To verify that apache2 is running as a Service in your OS,use the following comm
 • $ sudo systemctl status apache2
 
 
-![Alt text](<Images/Screenshot 2024-01-09 at 02.55.34.png>)
+![Alt text](<Images/Screenshot 2024-01-14 at 23.37.31.png>)
 
 Lets try to check how we can access it locally in our Ubuntu shell, run any of this command;
 
-• $ curl http://locathost:80
+• $ curl http://localhost:80
 
 • $ curl http://127.0.0.1:80
 
 
-![Alt text](<Images/Screenshot 2024-01-09 at 03.15.02.png>)
+![Alt text](<Images/Screenshot 2024-01-14 at 23.33.54.png>)
 
 These 2 command above actually do pretty the same - they use **'*curl*'** command to request our Apache HTTP Server on port 80 (actually you can even try to not specify any port - it will work anyway).
 
@@ -299,7 +299,7 @@ In case you want to change this behavior, you'll need to edit the **/etc/apache2
 • sudo vim /etc/apache2/mods-enabled/dir.conf
 
 
-![Alt text](<Images/Screenshot 2024-01-11 at 20.05.46.png>)
+![Alt text](<Images/Screenshot 2024-01-15 at 14.40.30.png>)
 
 After saving and closing the file, you will need to reload Apache so the changes take effect:
 
@@ -312,6 +312,8 @@ Finally, we will create a PHP script to test that PHP is correctly installed and
 
 Create a new file named **index.php** inside your custom web root folder:
 
+• $ vim /var/www/projectlamb/index.php
+
 
 ![Alt text](<Images/Screenshot 2024-01-12 at 01.18.18.png>)
 
@@ -320,3 +322,15 @@ This will open a blank file. Add the following text, which is valid PHP code, in
 •  <?php
 
 phpinfo();
+
+
+![Alt text](<Images/Screenshot 2024-01-15 at 16.50.12.png>)
+
+When you are finished, save and close the file, then refresh the page and you will see a page similar to this:
+
+
+![Alt text](<Images/Screenshot 2024-01-15 at 16.54.25.png>)
+
+After checking the relevant information about your PHP server through that pages, it's best to remove the file you created as it contains sensitive information about your PHP environment -on your Ubuntu server. You can use **rm** to do so:
+
+• $ sudo rm /var/www/projectlamb/index.php
